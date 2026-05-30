@@ -5,24 +5,15 @@
         KeyDown="Window_KeyDown" 
         KeyUp="Window_KeyUp"
         WindowStartupLocation="CenterScreen"
-        CanResize="False">
+        CanResize="False"
+        RenderOptions.BitmapInterpolationMode="None">
 
     <Grid>
-        <Canvas Name="GameCanvas" 
-                Background="SkyBlue">
-            
-            <Rectangle Name="GrassLayer" 
-                       Width="1000" 
-                       Height="100" 
-                       Canvas.Bottom="0" 
-                       Canvas.Left="0">
-                <Rectangle.Fill>
-                    <LinearGradientBrush StartPoint="0%,0%" EndPoint="0%,100%">
-                        <GradientStop Offset="0" Color="#4CAF50"/>
-                        <GradientStop Offset="1" Color="#1B5E20"/>
-                    </LinearGradientBrush>
-                </Rectangle.Fill>
-            </Rectangle>
+        <Image Name="BackgroundImage"
+               Source="avares://BoulderGame/Assets/background.png" 
+               Stretch="UniformToFill"/>
+
+        <Canvas Name="GameCanvas">
 
             <TextBlock Name="ScoreText" 
                        Text="Score: 0" 
@@ -30,6 +21,33 @@
                        FontWeight="Bold" 
                        Canvas.Left="10" Canvas.Top="10" 
                        Foreground="Black" 
+                       ZIndex="100"/>
+
+            <TextBlock Name="DifficultyText"
+                       Text="Level: Normal"
+                       FontSize="18"
+                       FontWeight="SemiBold"
+                       Canvas.Left="10"
+                       Canvas.Top="44"
+                       Foreground="Black"
+                       ZIndex="100"/>
+
+            <TextBlock Name="LivesText"
+                       Text="Lives: 3"
+                       FontSize="18"
+                       FontWeight="SemiBold"
+                       Canvas.Left="10"
+                       Canvas.Top="70"
+                       Foreground="Black"
+                       ZIndex="100"/>
+
+            <TextBlock Name="BonusText"
+                       Text=""
+                       FontSize="18"
+                       FontWeight="SemiBold"
+                       Canvas.Left="10"
+                       Canvas.Top="96"
+                       Foreground="Black"
                        ZIndex="100"/>
         </Canvas>
 

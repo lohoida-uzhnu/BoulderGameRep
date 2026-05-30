@@ -61,6 +61,16 @@ namespace BoulderGame
             }
         }
 
+        public static int GetCurrentUserBestScore()
+        {
+            string currentUser = Session.CurrentUsername;
+            
+            return LoadScores()
+                .Where(s => s.Username == currentUser)
+                .Select(s => s.Score)
+                .DefaultIfEmpty(0)
+                .Max();
+        }
         public static List<PlayerRecord> LoadScores()
         {
             try
@@ -84,6 +94,11 @@ namespace BoulderGame
                 System.Diagnostics.Debug.WriteLine($"Load error: {ex.Message}");
                 return new List<PlayerRecord>();
             }
+        }
+
+        public static bool IsSecretLevelUnlocked()
+        {
+            return GetCurrentUserBestScore() >= 1000;
         }
     }
 }

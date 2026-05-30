@@ -1,5 +1,6 @@
 <ResourceDictionary xmlns="https://github.com/avaloniaui"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+                    <!--Login and Register-->
     <x:String x:Key="LoginTitle">Вхід</x:String>
     <x:String x:Key="LoginField">Логін:</x:String>
     <x:String x:Key="PasswordField">Пароль:</x:String>

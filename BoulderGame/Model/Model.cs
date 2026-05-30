@@ -22,7 +22,7 @@ namespace BoulderGame.Model
     public class  PlayerRecord
     {
         public int Id { get; set; }
-        public string Username { get; set; }
+        public string Username { get; set; } = "Player";
         public int Score { get; set; }
         
     }
@@ -34,6 +34,12 @@ namespace BoulderGame.Model
 
     public class Boulder : GameObject
     {
+        public double Speed { get; set; }
+    }
+
+    public class Bonus : GameObject
+    {
+        public string Type { get; set; } = "";
         public double Speed { get; set; }
     }
 }

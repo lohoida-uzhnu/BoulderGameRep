@@ -11,6 +11,9 @@
     <AvaloniaXaml Remove="Resources\Languages\Ukrainian-UA.axaml" />
   </ItemGroup>
   <ItemGroup>
+    <None Remove="Assets\background.jpg" />
+  </ItemGroup>
+  <ItemGroup>
     <AvaloniaResource Include="Resources\Languages\English-US.axaml" />
     <AvaloniaResource Include="Resources\Languages\Ukrainian-UA.axaml" />
   </ItemGroup>
@@ -31,8 +34,17 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="Assets\background.jpg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+
+  <ItemGroup>
     <Compile Update="Views\AuthWin.axaml.cs">
       <DependentUpon>AuthWin.axaml</DependentUpon>
     </Compile>
   </ItemGroup>
+	<ItemGroup>
+		<AvaloniaResource Include="Assets\**" />
+	</ItemGroup>
 </Project>

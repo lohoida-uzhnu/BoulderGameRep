@@ -1,4 +1,4 @@
-<Window xmlns="https://github.com/avaloniaui"
+﻿<Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         x:Class="BoulderGame.MainWindow"
         Title="MainMenu"
@@ -47,5 +47,58 @@
         </StackPanel>
 
         <ContentControl Name="MainContent" IsHitTestVisible="False"/>
+
+        <Border Name="DifficultyOverlay"
+                Grid.RowSpan="3"
+                Background="#AA000000"
+                IsVisible="False"
+                ZIndex="50">
+            <Border Background="{DynamicResource SystemRegionBrush}"
+                    Padding="32"
+                    CornerRadius="12"
+                    Width="440"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    BoxShadow="0 10 30 0 #50000000">
+                <StackPanel Spacing="14">
+                    <TextBlock Text="Choose difficulty"
+                               FontSize="28"
+                               FontWeight="Bold"
+                               HorizontalAlignment="Center"/>
+                    <TextBlock Name="SecretLevelHint"
+                               Text="Secret level unlocks after 1000 points"
+                               FontSize="14"
+                               HorizontalAlignment="Center"
+                               TextWrapping="Wrap"/>
+
+                    <Button Content="Easy"
+                            Tag="Easy"
+                            Click="DifficultyButton_Click"
+                            Classes="MenuBtn"
+                            HorizontalAlignment="Center"/>
+                    <Button Content="Normal"
+                            Tag="Normal"
+                            Click="DifficultyButton_Click"
+                            Classes="MenuBtn"
+                            HorizontalAlignment="Center"/>
+                    <Button Content="Hard"
+                            Tag="Hard"
+                            Click="DifficultyButton_Click"
+                            Classes="MenuBtn"
+                            HorizontalAlignment="Center"/>
+                    <Button Name="SecretLevelButton"
+                            Content="Secret"
+                            Tag="Secret"
+                            Click="DifficultyButton_Click"
+                            Classes="MenuBtn"
+                            HorizontalAlignment="Center"/>
+                    <Button Content="{DynamicResource BackTM}"
+                            Click="CloseDifficultyMenu_Click"
+                            Classes="MenuBtn"
+                            Background="#475569"
+                            HorizontalAlignment="Center"/>
+                </StackPanel>
+            </Border>
+        </Border>
     </Grid>
 </Window>

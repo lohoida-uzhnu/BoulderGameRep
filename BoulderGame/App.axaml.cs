@@ -23,18 +23,9 @@ public partial class App : Application
         string currentLang = "English-US";
         bool isDark = false;
 
-        if (File.Exists(settingsPath))
-        {
-            string json = File.ReadAllText(settingsPath);
-
-            var loadedSettings = JsonSerializer.Deserialize<AppSettings>(json);
-
-            if (loadedSettings != null)
-            {
-                currentLang = loadedSettings.Language;
-                isDark = loadedSettings.IsDarkTheme;
-            }
-        }
+        var loadedSettings = LoadSettings();
+        currentLang = loadedSettings.Language;
+        isDark = loadedSettings.IsDarkTheme;
 
         RequestedThemeVariant = isDark ? ThemeVariant.Dark : ThemeVariant.Light;
         SetLanguage(currentLang);
@@ -69,9 +60,46 @@ public partial class App : Application
 
     public static void SaveSettings(string lang, bool isDark)
     {
-        var settingsObject = new AppSettings { Language = lang, IsDarkTheme = isDark };
+        var currentSettings = LoadSettings();
+        SaveSettings(lang, isDark, currentSettings.SelectedHeroId, currentSettings.SelectedBackgroundId);
+    }
+
+    public static void SaveSettings(string lang, bool isDark, string selectedHeroId)
+    {
+        var currentSettings = LoadSettings();
+        SaveSettings(lang, isDark, selectedHeroId, currentSettings.SelectedBackgroundId);
+    }
+
+    public static void SaveSettings(string lang, bool isDark, string selectedHeroId, string selectedBackgroundId)
+    {
+        var settingsObject = new AppSettings
+        {
+            Language = lang,
+            IsDarkTheme = isDark,
+            SelectedHeroId = selectedHeroId,
+            SelectedBackgroundId = selectedBackgroundId
+        };
         string json = JsonSerializer.Serialize(settingsObject);
 
         File.WriteAllText(settingsPath, json);
+    }
+
+    public static AppSettings LoadSettings()
+    {
+        if (!File.Exists(settingsPath))
+        {
+            return new AppSettings();
+        }
+
+        try
+        {
+            string json = File.ReadAllText(settingsPath);
+            return JsonSerializer.Deserialize<AppSettings>(json) ?? new AppSettings();
+        }
+        catch (Exception ex)
+        {
+            System.Diagnostics.Debug.WriteLine($"Error loading settings: {ex.Message}");
+            return new AppSettings();
+        }
     }
 }
