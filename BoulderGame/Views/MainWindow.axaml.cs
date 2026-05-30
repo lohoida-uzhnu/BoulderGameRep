@@ -2,6 +2,7 @@
 using Avalonia.Controls.ApplicationLifetimes;
 using Avalonia.Interactivity;
 using Avalonia;
+using Avalonia.Markup.Xaml.MarkupExtensions;
 
 namespace BoulderGame
 {
@@ -38,21 +39,32 @@ namespace BoulderGame
         {
             DifficultyOverlay.IsVisible = false;
         }
+        private string GetText(string key)
+        {
+            if (Application.Current != null && 
+                Application.Current.TryGetResource(key, this.ActualThemeVariant, out var value) && 
+                value != null)
+            {
+                return value.ToString();
+            }₴₴
+            return key;
+        }
         private void RefreshSecretLevelState()
         {
             var bestScore = ScoreManager.GetCurrentUserBestScore();
+            bool isUnlocked = bestScore >= 1000;
+
+            SecretLevelButton.IsEnabled = isUnlocked;
             
-            if (bestScore >= 1000)
+            if (isUnlocked)
             {
-                SecretLevelButton.IsEnabled = true;
-                SecretLevelButton.Content = "Secret";
-                SecretLevelHint.Text = "Secret level unlocked. Best score: " + bestScore;
+                SecretLevelButton.Content = GetText("SecretBtnU");
+                SecretLevelHint.Text = string.Format(GetText("SecretHintU"), bestScore);
             }
             else
             {
-                SecretLevelButton.IsEnabled = false;
-                SecretLevelButton.Content = "Secret - locked";
-                SecretLevelHint.Text = $"Secret level unlocks after 1000 points. Best score: " + bestScore;
+                SecretLevelButton.Content = GetText("SecretBtnL");
+                SecretLevelHint.Text = string.Format(GetText("SecretHintL"), bestScore);
             }
         }
         

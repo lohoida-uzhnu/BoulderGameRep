@@ -12,6 +12,7 @@
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
                 <ResourceInclude Source="avares://BoulderGame/Resources/Languages/English-US.axaml"/>
+                <ResourceInclude Source="avares://BoulderGame/Resources/Languages/Ukrainian-UA.axaml"/>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>

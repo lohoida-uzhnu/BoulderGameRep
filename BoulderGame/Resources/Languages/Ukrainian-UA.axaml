@@ -19,12 +19,25 @@
     <x:String x:Key="Stat">Статистика</x:String>
     <x:String x:Key="Sett">Налаштування</x:String>
     <x:String x:Key="Exit">Вихід</x:String>
+                    <!--ChooseDifficulty-->
+    <x:String x:Key="ChooseD">Виберіть складність</x:String>
+	<x:String x:Key="SecretBtnU">Секретний</x:String>
+	<x:String x:Key="SecretBtnL">Секретний - закритий</x:String>
+	<x:String x:Key="SecretHintU">Секретний рівень відкрито. Рекорд: {0}</x:String>
+	<x:String x:Key="SecretHintL">Секретний рівень відкриється після 1000 очок. Рекорд: {0}</x:String>
+	<x:String x:Key="Easy">Легий</x:String>
+	<x:String x:Key="Normal">Середній</x:String>
+	<x:String x:Key="Hard">Важкий</x:String>
+	<x:String x:Key="Secret">Секретний</x:String>
                    <!--Settings-->
     <x:String x:Key="SettTitle">Налаштування</x:String>
     <x:String x:Key="Theme">Тема:</x:String>
     <x:String x:Key="ThemeL">Світла</x:String>
     <x:String x:Key="ThemeD">Темна</x:String>
     <x:String x:Key="BackTM">Назад в меню</x:String>
+    <x:String x:Key="HeroT">Герої</x:String>
+    <x:String x:Key="BackgroundT">Задній фон</x:String>
+    <x:String x:Key="BestS">Найкращий рахунок: </x:String>
                     <!--Statistics-->
     <x:String x:Key="StatTitle">Статистика</x:String>
     <x:String x:Key="SortBS">Сортувати за очками</x:String>

@@ -19,12 +19,25 @@
     <x:String x:Key="Stat">Statistics</x:String>
     <x:String x:Key="Sett">Settings</x:String>
     <x:String x:Key="Exit">Exit</x:String>
+                    <!--ChooseDifficulty-->
+    <x:String x:Key="ChooseD">ChooseDifficulty</x:String>
+	<x:String x:Key="SecretBtnU">Secret</x:String>
+	<x:String x:Key="SecretBtnL">Secret - locked</x:String>
+	<x:String x:Key="SecretHintU">Secret level unlocked. Best score: {0}</x:String>
+	<x:String x:Key="SecretHintL">Secret level unlocks after 1000 points. Best score: {0}</x:String>
+	<x:String x:Key="Easy">Easy</x:String>
+	<x:String x:Key="Normal">Normal</x:String>
+	<x:String x:Key="Hard">Hard</x:String>
+	<x:String x:Key="Secret">Secret</x:String>
                     <!--Settings-->
     <x:String x:Key="SettTitle">Settings</x:String>
     <x:String x:Key="Theme">Theme:</x:String>
     <x:String x:Key="ThemeL">Light</x:String>
     <x:String x:Key="ThemeD">Dark</x:String>
     <x:String x:Key="BackTM">Back to menu</x:String>
+	<x:String x:Key="HeroT">Hero</x:String>
+	<x:String x:Key="BackgroundT">Background</x:String>
+	<x:String x:Key="BestS">Best score: </x:String>
                     <!--Statistics-->
     <x:String x:Key="StatTitle">Statistics</x:String>
     <x:String x:Key="SortBS">Sort by Score</x:String>
