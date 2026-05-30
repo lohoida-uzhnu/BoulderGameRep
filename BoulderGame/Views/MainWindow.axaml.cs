@@ -46,7 +46,7 @@ namespace BoulderGame
                 value != null)
             {
                 return value.ToString();
-            }₴₴
+            }
             return key;
         }
         private void RefreshSecretLevelState()
