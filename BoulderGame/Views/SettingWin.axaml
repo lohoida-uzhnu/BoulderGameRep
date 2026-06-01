@@ -36,7 +36,7 @@
             <Grid ColumnDefinitions="*, *" Margin="0,12,0,0">
         
                 <StackPanel Grid.Column="0" Spacing="8" Margin="0,0,10,0">
-                    <TextBlock Text="Hero"
+                    <TextBlock Text="{DynamicResource HeroT}"
                                FontSize="20"
                                FontWeight="SemiBold"/>
                     <TextBlock Name="BestScoreText"
@@ -47,7 +47,7 @@
                 </StackPanel>
 
                 <StackPanel Grid.Column="1" Spacing="8" Margin="10,0,0,0">
-                    <TextBlock Text="Background"
+                    <TextBlock Text="{DynamicResource BackgroundT}"
                                FontSize="20"
                                FontWeight="SemiBold"/>
                     <TextBlock Text="" FontSize="14"/> 
