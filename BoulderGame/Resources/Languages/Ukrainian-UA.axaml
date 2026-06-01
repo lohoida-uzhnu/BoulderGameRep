@@ -42,6 +42,12 @@
     <x:String x:Key="StatTitle">Статистика</x:String>
     <x:String x:Key="SortBS">Сортувати за очками</x:String>
     <x:String x:Key="SortBN">Сортувати за іменем</x:String>
+                    <!--GameScreen-->
+	<x:String x:Key="ScoreFormat">Рахунок: {0}</x:String>
+	<x:String x:Key="DifficultyFormat">Рівень: {0} | Етап: {1}</x:String>
+	<x:String x:Key="LivesFormat">Життя: {0}</x:String>
+	<x:String x:Key="ShieldBonusFormat">Щит активовано</x:String>
+	<x:String x:Key="SpeedBonusFormat">Бонус швидкості</x:String>
                     <!--GameOver-->
     <x:String x:Key="GameOver">ГРА ЗАКІНЧЕНА</x:String>
     <x:String x:Key="FinalScore">Очки: </x:String>

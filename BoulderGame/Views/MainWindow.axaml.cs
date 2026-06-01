@@ -39,16 +39,6 @@ namespace BoulderGame
         {
             DifficultyOverlay.IsVisible = false;
         }
-        private string GetText(string key)
-        {
-            if (Application.Current != null && 
-                Application.Current.TryGetResource(key, this.ActualThemeVariant, out var value) && 
-                value != null)
-            {
-                return value.ToString();
-            }
-            return key;
-        }
         private void RefreshSecretLevelState()
         {
             var bestScore = ScoreManager.GetCurrentUserBestScore();
@@ -58,13 +48,13 @@ namespace BoulderGame
             
             if (isUnlocked)
             {
-                SecretLevelButton.Content = GetText("SecretBtnU");
-                SecretLevelHint.Text = string.Format(GetText("SecretHintU"), bestScore);
+                SecretLevelButton.Content = Loc.Get("SecretBtnU");
+                SecretLevelHint.Text = string.Format(Loc.Get("SecretHintU"), bestScore);
             }
             else
             {
-                SecretLevelButton.Content = GetText("SecretBtnL");
-                SecretLevelHint.Text = string.Format(GetText("SecretHintL"), bestScore);
+                SecretLevelButton.Content = Loc.Get("SecretBtnL");
+                SecretLevelHint.Text = string.Format(Loc.Get("SecretHintL"), bestScore);
             }
         }
         

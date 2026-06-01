@@ -32,7 +32,7 @@ namespace BoulderGame.Model
                 Name = "Owlet Monster",
                 RunAssetPath = "avares://BoulderGame/Assets/Owlet_Monster_Run_6.png",
                 IdleAssetPath = "avares://BoulderGame/Assets/Owlet_Monster_Idle_4.png",
-                RequiredScore = 100
+                RequiredScore = 300
             },
             new HeroInfo
             {
@@ -40,7 +40,7 @@ namespace BoulderGame.Model
                 Name = "Dude Monster",
                 RunAssetPath = "avares://BoulderGame/Assets/Dude_Monster_Run_6.png",
                 IdleAssetPath = "avares://BoulderGame/Assets/Dude_Monster_Idle_4.png",
-                RequiredScore = 300
+                RequiredScore = 500
             }
         };
 

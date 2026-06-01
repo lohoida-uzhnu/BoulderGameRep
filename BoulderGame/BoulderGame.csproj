@@ -34,12 +34,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="Assets\background.jpg">
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </Resource>
-  </ItemGroup>
-
-  <ItemGroup>
     <Compile Update="Views\AuthWin.axaml.cs">
       <DependentUpon>AuthWin.axaml</DependentUpon>
     </Compile>

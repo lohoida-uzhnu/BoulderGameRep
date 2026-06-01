@@ -42,6 +42,12 @@
     <x:String x:Key="StatTitle">Statistics</x:String>
     <x:String x:Key="SortBS">Sort by Score</x:String>
     <x:String x:Key="SortBN">Sort by Name</x:String>
+                    <!--GameScreen-->
+	<x:String x:Key="ScoreFormat">Score: {0}</x:String>
+	<x:String x:Key="DifficultyFormat">Level: {0} | Stage: {1}</x:String>
+	<x:String x:Key="LivesFormat">Lives: {0}</x:String>
+	<x:String x:Key="ShieldBonusFormat">Shield active</x:String>
+	<x:String x:Key="SpeedBonusFormat">Speed bonus</x:String>
     				<!--GameOver-->
     <x:String x:Key="GameOver">GAME OVER</x:String>
     <x:String x:Key="FinalScore">Score: </x:String>

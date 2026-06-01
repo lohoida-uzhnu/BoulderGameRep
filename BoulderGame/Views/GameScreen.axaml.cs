@@ -443,18 +443,18 @@ namespace BoulderGame
                 }
             }
 
-            ScoreText.Text = $"Score: {score}";
-            DifficultyText.Text = $"Level: {difficulty} | Stage: {progressLevel + 1}";
-            LivesText.Text = $"Lives: {lives}";
+            ScoreText.Text = string.Format(Loc.Get("ScoreFormat", this.ActualThemeVariant), score);
+            DifficultyText.Text = string.Format(Loc.Get("DifficultyFormat", this.ActualThemeVariant), Loc.Get(difficulty), progressLevel + 1);
+            LivesText.Text = string.Format(Loc.Get("LivesFormat", this.ActualThemeVariant), lives);
             BonusText.Text = "";
 
             if (shieldActive)
             {
-                BonusText.Text = "Shield active";
+                BonusText.Text = string.Format(Loc.Get("ShieldBonusFormat", this.ActualThemeVariant), shieldTime);
             }
             else if (speedBonusTime > 0)
             {
-                BonusText.Text = "Speed bonus";
+                BonusText.Text = string.Format(Loc.Get("SpeedBonusFormat", this.ActualThemeVariant), speedBonusTime);
             }
 
             UpdatePlayerSprite();
