@@ -25,7 +25,7 @@
 	<x:String x:Key="SecretBtnL">Секретний - закритий</x:String>
 	<x:String x:Key="SecretHintU">Секретний рівень відкрито. Рекорд: {0}</x:String>
 	<x:String x:Key="SecretHintL">Секретний рівень відкриється після 1000 очок. Рекорд: {0}</x:String>
-	<x:String x:Key="Easy">Легий</x:String>
+	<x:String x:Key="Easy">Легкий</x:String>
 	<x:String x:Key="Normal">Середній</x:String>
 	<x:String x:Key="Hard">Важкий</x:String>
 	<x:String x:Key="Secret">Секретний</x:String>

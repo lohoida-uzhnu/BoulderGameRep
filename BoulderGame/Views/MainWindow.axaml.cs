@@ -2,7 +2,6 @@
 using Avalonia.Controls.ApplicationLifetimes;
 using Avalonia.Interactivity;
 using Avalonia;
-using Avalonia.Markup.Xaml.MarkupExtensions;
 
 namespace BoulderGame
 {

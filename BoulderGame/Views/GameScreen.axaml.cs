@@ -26,6 +26,7 @@ namespace BoulderGame
         private readonly Bitmap shieldBonusBitmap = LoadAssetBitmap("avares://BoulderGame/Assets/Bonus_Shield.png");
         private SpriteAnimator? playerRunAnimator;
         private SpriteAnimator? playerIdleAnimator;
+        
         private readonly Image playerImage = new Image
         {
             Stretch = Stretch.Fill,
